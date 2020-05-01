@@ -8,8 +8,10 @@
     "start": "nodemon ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
     "test:watch": "npm run test -- --watch",
-    "build": "webpack -p --define process.env.NODE_ENV='\"production\"' --progress --colors"
-  }, 
+    "build": "webpack -p --define process.env.NODE_ENV='\"production\"' --progress --colors",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -29,6 +31,8 @@
     "react-dom": "16.3.2",
     "react-redux": "5.0.7",
     "redux": "4.0.0",
-    "youtube-api-search": "0.0.5"
-  }
+    "youtube-api-search": "0.0.5",
+    "snyk": "^1.316.1"
+  },
+  "snyk": true
 }
